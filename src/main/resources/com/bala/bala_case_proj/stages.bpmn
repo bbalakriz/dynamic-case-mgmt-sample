@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" id="_r_BfwCeyEeum1PxrOwlbTg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" id="_NWlE4Ce0Eeum1PxrOwlbTg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_caseFile_startItem" structureRef="Boolean"/>
   <bpmn2:itemDefinition id="_caseFile_reasonItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_SkippableInputXItem" structureRef="Object"/>
@@ -43,7 +43,7 @@
         </bpmn2:extensionElements>
         <bpmn2:script><![CDATA[System.out.println("Executed task 2 successfully");]]></bpmn2:script>
       </bpmn2:scriptTask>
-      <bpmn2:completionCondition xsi:type="bpmn2:tFormalExpression" id="_r_BfwSeyEeum1PxrOwlbTg" language="http://www.mvel.org/2.0"><![CDATA[autocomplete]]></bpmn2:completionCondition>
+      <bpmn2:completionCondition xsi:type="bpmn2:tFormalExpression" id="_NWlE4Se0Eeum1PxrOwlbTg" language="http://www.mvel.org/2.0"><![CDATA[autocomplete]]></bpmn2:completionCondition>
     </bpmn2:adHocSubProcess>
     <bpmn2:adHocSubProcess id="_2BD87426-5BFF-43A8-AE58-42D634F980E5" name="Stage 1" ordering="Sequential">
       <bpmn2:extensionElements>
@@ -62,52 +62,55 @@
           <drools:metaData name="customAutoStart">
             <drools:metaValue><![CDATA[true]]></drools:metaValue>
           </drools:metaData>
+          <drools:onEntry-script scriptFormat="http://www.java.com/java">
+            <drools:script><![CDATA[kcontext.setVariable("caseFile_reason" , "Completed")]]></drools:script>
+          </drools:onEntry-script>
         </bpmn2:extensionElements>
-        <bpmn2:ioSpecification id="_r_BfwieyEeum1PxrOwlbTg">
+        <bpmn2:ioSpecification id="_NWlE4ie0Eeum1PxrOwlbTg">
           <bpmn2:dataInput id="_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_TaskNameInputX" drools:dtype="Object" itemSubjectRef="__7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_TaskNameInputXItem" name="TaskName"/>
           <bpmn2:dataInput id="_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_SkippableInputX" drools:dtype="Object" itemSubjectRef="__7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_SkippableInputXItem" name="Skippable"/>
           <bpmn2:dataInput id="_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_GroupIdInputX" drools:dtype="Object" itemSubjectRef="__7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_GroupIdInputXItem" name="GroupId"/>
           <bpmn2:dataOutput id="_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_ReasonOutputX" drools:dtype="String" itemSubjectRef="__7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_ReasonOutputXItem" name="Reason"/>
-          <bpmn2:inputSet id="_r_BfwyeyEeum1PxrOwlbTg">
+          <bpmn2:inputSet id="_NWlE4ye0Eeum1PxrOwlbTg">
             <bpmn2:dataInputRefs>_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_TaskNameInputX</bpmn2:dataInputRefs>
             <bpmn2:dataInputRefs>_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_SkippableInputX</bpmn2:dataInputRefs>
             <bpmn2:dataInputRefs>_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_GroupIdInputX</bpmn2:dataInputRefs>
           </bpmn2:inputSet>
-          <bpmn2:outputSet id="_r_CG0CeyEeum1PxrOwlbTg">
+          <bpmn2:outputSet id="_NWlE5Ce0Eeum1PxrOwlbTg">
             <bpmn2:dataOutputRefs>_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_ReasonOutputX</bpmn2:dataOutputRefs>
           </bpmn2:outputSet>
         </bpmn2:ioSpecification>
-        <bpmn2:dataInputAssociation id="_r_CG0SeyEeum1PxrOwlbTg">
+        <bpmn2:dataInputAssociation id="_NWlE5Se0Eeum1PxrOwlbTg">
           <bpmn2:targetRef>_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_TaskNameInputX</bpmn2:targetRef>
-          <bpmn2:assignment id="_r_CG0ieyEeum1PxrOwlbTg">
-            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_r_CG0yeyEeum1PxrOwlbTg"><![CDATA[Task1]]></bpmn2:from>
-            <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_r_CG1CeyEeum1PxrOwlbTg">_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_TaskNameInputX</bpmn2:to>
+          <bpmn2:assignment id="_NWlE5ie0Eeum1PxrOwlbTg">
+            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_NWlE5ye0Eeum1PxrOwlbTg"><![CDATA[Task1]]></bpmn2:from>
+            <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_NWlE6Ce0Eeum1PxrOwlbTg">_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_TaskNameInputX</bpmn2:to>
           </bpmn2:assignment>
         </bpmn2:dataInputAssociation>
-        <bpmn2:dataInputAssociation id="_r_CG1SeyEeum1PxrOwlbTg">
+        <bpmn2:dataInputAssociation id="_NWlE6Se0Eeum1PxrOwlbTg">
           <bpmn2:targetRef>_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_SkippableInputX</bpmn2:targetRef>
-          <bpmn2:assignment id="_r_CG1ieyEeum1PxrOwlbTg">
-            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_r_CG1yeyEeum1PxrOwlbTg"><![CDATA[false]]></bpmn2:from>
-            <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_r_CG2CeyEeum1PxrOwlbTg">_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_SkippableInputX</bpmn2:to>
+          <bpmn2:assignment id="_NWlE6ie0Eeum1PxrOwlbTg">
+            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_NWlE6ye0Eeum1PxrOwlbTg"><![CDATA[false]]></bpmn2:from>
+            <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_NWlE7Ce0Eeum1PxrOwlbTg">_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_SkippableInputX</bpmn2:to>
           </bpmn2:assignment>
         </bpmn2:dataInputAssociation>
-        <bpmn2:dataInputAssociation id="_r_CG2SeyEeum1PxrOwlbTg">
+        <bpmn2:dataInputAssociation id="_NWlE7Se0Eeum1PxrOwlbTg">
           <bpmn2:targetRef>_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_GroupIdInputX</bpmn2:targetRef>
-          <bpmn2:assignment id="_r_CG2ieyEeum1PxrOwlbTg">
-            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_r_CG2yeyEeum1PxrOwlbTg"><![CDATA[testGroup]]></bpmn2:from>
-            <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_r_CG3CeyEeum1PxrOwlbTg">_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_GroupIdInputX</bpmn2:to>
+          <bpmn2:assignment id="_NWlE7ie0Eeum1PxrOwlbTg">
+            <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_NWlE7ye0Eeum1PxrOwlbTg"><![CDATA[testGroup]]></bpmn2:from>
+            <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_NWlE8Ce0Eeum1PxrOwlbTg">_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_GroupIdInputX</bpmn2:to>
           </bpmn2:assignment>
         </bpmn2:dataInputAssociation>
-        <bpmn2:dataOutputAssociation id="_r_CG3SeyEeum1PxrOwlbTg">
+        <bpmn2:dataOutputAssociation id="_NWlE8Se0Eeum1PxrOwlbTg">
           <bpmn2:sourceRef>_7A48D0F4-2A33-4E37-98E7-AEBFD4AA7C31_ReasonOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>caseFile_reason</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
       </bpmn2:userTask>
-      <bpmn2:completionCondition xsi:type="bpmn2:tFormalExpression" id="_r_CG3ieyEeum1PxrOwlbTg" language="http://www.mvel.org/2.0"><![CDATA[autocomplete]]></bpmn2:completionCondition>
+      <bpmn2:completionCondition xsi:type="bpmn2:tFormalExpression" id="_NWlE8ie0Eeum1PxrOwlbTg" language="http://www.mvel.org/2.0"><![CDATA[autocomplete]]></bpmn2:completionCondition>
     </bpmn2:adHocSubProcess>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_r_CG3yeyEeum1PxrOwlbTg">
-    <bpmndi:BPMNPlane id="_r_CG4CeyEeum1PxrOwlbTg" bpmnElement="bala-case-proj.stages">
+  <bpmndi:BPMNDiagram id="_NWlE8ye0Eeum1PxrOwlbTg">
+    <bpmndi:BPMNPlane id="_NWlE9Ce0Eeum1PxrOwlbTg" bpmnElement="bala-case-proj.stages">
       <bpmndi:BPMNShape id="shape__2BD87426-5BFF-43A8-AE58-42D634F980E5" bpmnElement="_2BD87426-5BFF-43A8-AE58-42D634F980E5" isExpanded="true">
         <dc:Bounds height="253.0" width="653.0" x="168.0" y="34.0"/>
       </bpmndi:BPMNShape>
@@ -122,7 +125,7 @@
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_r_CG4SeyEeum1PxrOwlbTg" type="BPSimData">
+  <bpmn2:relationship id="_NWlE9Se0Eeum1PxrOwlbTg" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
@@ -130,7 +133,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_r_BfwCeyEeum1PxrOwlbTg</bpmn2:source>
-    <bpmn2:target>_r_BfwCeyEeum1PxrOwlbTg</bpmn2:target>
+    <bpmn2:source>_NWlE4Ce0Eeum1PxrOwlbTg</bpmn2:source>
+    <bpmn2:target>_NWlE4Ce0Eeum1PxrOwlbTg</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
