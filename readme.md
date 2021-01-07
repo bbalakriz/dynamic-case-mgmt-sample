@@ -1,6 +1,7 @@
 
-**Users**:  
-biz02 to use kie-server APIs
+Users
+======
+biz02 to use kie-server APIs\
 biz01 to access tasks
 
 Case Start
@@ -28,9 +29,7 @@ Update case data
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Case Id:* FRAUD--0000000001
-
 *Variables*: newIssueRequired, complianceCheckComplete
-
 *Value*: true
 
 Case can be closed at any point in time
@@ -59,7 +58,7 @@ Complete approve task
 =======================
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Task Id:* 23\
-*Auto-progress:* true\
+*Auto-progress:* true
 
     {
         "isHighRisk": true
@@ -74,7 +73,7 @@ Dynamic task creation
 =======================
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
-*Case Id:* FRAUD--0000000001\
+*Case Id:* FRAUD--0000000001
 
     {
      "name" : "Courtesy Call",
@@ -89,7 +88,7 @@ Dynamic task creation
 Cases with Stage
 =================
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
-*Process Id:* bala-case-proj.stages\
+*Process Id:* bala-case-proj.stages
 
     {
       "case-data" : {
@@ -107,7 +106,7 @@ Start stage 2 using data id
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Case Id:* STAGE--0000000001\
 *Case File Variable:* caseFile_stage2\
-*Value:* true\
+*Value:* true
 
 
 Start a task inside stage 2
@@ -115,8 +114,8 @@ Start a task inside stage 2
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Case Id:* STAGE--0000000001\
 *Stage Id:* Stage 2\
-*Node Id:* Task 2\
-{}
+*Node Id:* Task 2
+    {}
 
 
 ***************************************************************************************
@@ -125,7 +124,7 @@ Case Start
 ============
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
-*Process Id:* bala-case-proj.simple-case\
+*Process Id:* bala-case-proj.simple-case
 
     {
       "case-data" : {
@@ -142,18 +141,14 @@ Update case data
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Case Id:* BALA-0000000005\
-*Variables:* \
-needMoreInfo\
-notificationComplete\
-
-*Value:* \
-true\
+*Variables:* needMoreInfo, notificationComplete
+*Value:* true
 
 Case close
 ===========
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
-*Case Id:* BALA-0000000001\
+*Case Id:* BALA-0000000001
 
     ""
 
@@ -163,7 +158,7 @@ Case re-open
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Process Id:* bala-case-proj.simple-case\
-*Case Id:* BALA-0000000001\
+*Case Id:* BALA-0000000001
 
     {
       "case-data" : {
@@ -180,7 +175,7 @@ Complete approve task
 =======================
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Task Id:* 23\
-*Auto-progress:* true\
+*Auto-progress:* true
 
     {
         "approved_": true
@@ -196,7 +191,7 @@ Dynamic task creation
 =======================
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
-*Case Id:* CASE-0000000003\
+*Case Id:* CASE-0000000003
 
     {
      "name" : "testDynamicTask",
