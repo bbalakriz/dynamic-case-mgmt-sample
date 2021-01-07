@@ -30,8 +30,7 @@ Update case data
 *Case Id:* FRAUD--0000000001
 
 *Variables*:
-newIssueRequired\
-complianceCheckComplete\
+newIssueRequired,complianceCheckComplete
 
 *Value*:\
 true
