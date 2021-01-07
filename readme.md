@@ -26,23 +26,23 @@ Dynamically any milestone be activated depending upon the external event.
 Update case data
 ==================
 
-*Container Id:* bala-case-proj_1.0.0-SNAPSHOT
-*Case Id:* FRAUD--0000000001
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Case Id:* FRAUD--0000000001\
 
-*Variables*:
-newIssueRequired
-complianceCheckComplete
+*Variables*:\
+newIssueRequired\
+complianceCheckComplete\
 
-*Value*:
-true
+*Value*:\
+true\
 
 Case can be closed at any point in time
 
 Case close
 ===========
 
-*Container Id:* bala-case-proj_1.0.0-SNAPSHOT
-*Case Id:* FRAUD--0000000001
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Case Id:* FRAUD--0000000001\
 *Payload:*
 
     ""
@@ -51,9 +51,9 @@ Case close
 Case re-open
 ===============
 
-*Container Id:* bala-case-proj_1.0.0-SNAPSHOT
-*Process Id:* bala-case-proj.fraud-mgmt
-*Case Id:* FRAUD--0000000001
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Process Id:* bala-case-proj.fraud-mgmt\
+*Case Id:* FRAUD--0000000001\
 
 *Payload:*
 
@@ -63,10 +63,10 @@ Case re-open
 
 Complete approve task
 =======================
-*Container Id:* bala-case-proj_1.0.0-SNAPSHOT
-*Task Id:* 23
-*auto-progress:* true
-*Payload:*
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Task Id:* 23\
+*Auto-progress:* true\
+*Payload:*\
 
     {
         "isHighRisk": true
@@ -80,8 +80,8 @@ Complete approve task
 Dynamic task creation
 =======================
 
-*Container Id:* bala-case-proj_1.0.0-SNAPSHOT
-*Case Id:* FRAUD--0000000001
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Case Id:* FRAUD--0000000001\
 
     {
      "name" : "Courtesy Call",
@@ -95,8 +95,8 @@ Dynamic task creation
 
 Cases with Stage
 =================
-*Container Id:* bala-case-proj_1.0.0-SNAPSHOT
-*Process Id:* bala-case-proj.stages
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Process Id:* bala-case-proj.stages\
 
     {
       "case-data" : {
@@ -111,18 +111,18 @@ Cases with Stage
 
 Start stage 2 using data id
 ============================
-*Container Id:* bala-case-proj_1.0.0-SNAPSHOT
-*Case Id:* STAGE--0000000001
-*Case File Variable:* caseFile_stage2
-*Value:* true
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Case Id:* STAGE--0000000001\
+*Case File Variable:* caseFile_stage2\
+*Value:* true\
 
 
 Start a task inside stage 2
 ==============================
-*Container Id:* bala-case-proj_1.0.0-SNAPSHOT
-*Case Id:* STAGE--0000000001
-*Stage Id:* Stage 2
-*Node Id:* Task 2
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Case Id:* STAGE--0000000001\
+*Stage Id:* Stage 2\
+*Node Id:* Task 2\
 {}
 
 
@@ -131,8 +131,8 @@ Start a task inside stage 2
 Case Start
 ============
 
-bala-case-proj_1.0.0-SNAPSHOT
-bala-case-proj.simple-case
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Process Id:* bala-case-proj.simple-case\
 
     {
       "case-data" : {
@@ -147,18 +147,20 @@ bala-case-proj.simple-case
 Update case data
 ==================
 
-bala-case-proj_1.0.0-SNAPSHOT
-BALA-0000000005
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Case Id:* BALA-0000000005\
+*Variables:* \
+needMoreInfo\
+notificationComplete\
 
-needMoreInfo
-notificationComplete
-true
+*Value:* \
+true\
 
 Case close
 ===========
 
-bala-case-proj_1.0.0-SNAPSHOT
-BALA-0000000001
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Case Id:* BALA-0000000001\
 
     ""
 
@@ -166,9 +168,9 @@ BALA-0000000001
 Case re-open
 ===============
 
-bala-case-proj_1.0.0-SNAPSHOT
-bala-case-proj.simple-case
-BALA-0000000001
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Process Id:* bala-case-proj.simple-case\
+*Case Id:* BALA-0000000001\
 
     {
       "case-data" : {
@@ -183,9 +185,9 @@ BALA-0000000001
 
 Complete approve task
 =======================
-bala-case-proj_1.0.0-SNAPSHOT
-23
-true
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Task Id:* 23\
+*Auto-progress:* true\
 
     {
         "approved_": true
@@ -200,8 +202,8 @@ true
 Dynamic task creation
 =======================
 
-bala-case-proj_1.0.0-SNAPSHOT
-CASE-0000000003
+*Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
+*Case Id:* CASE-0000000003\
 
     {
      "name" : "testDynamicTask",
