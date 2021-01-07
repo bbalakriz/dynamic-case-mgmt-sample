@@ -29,11 +29,9 @@ Update case data
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Case Id:* FRAUD--0000000001
 
-*Variables*:
-newIssueRequired,complianceCheckComplete
+*Variables*: newIssueRequired, complianceCheckComplete
 
-*Value*:\
-true
+*Value*: true
 
 Case can be closed at any point in time
 
@@ -41,8 +39,7 @@ Case close
 ===========
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
-*Case Id:* FRAUD--0000000001\
-*Payload:*
+*Case Id:* FRAUD--0000000001
 
     ""
 
@@ -53,8 +50,6 @@ Case re-open
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Process Id:* bala-case-proj.fraud-mgmt\
 *Case Id:* FRAUD--0000000001\
-
-*Payload:*
 
     {
         "request" : "Please reassess the case. Customer reported a problem.."
