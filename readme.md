@@ -49,7 +49,7 @@ Case re-open
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Process Id:* bala-case-proj.fraud-mgmt\
-*Case Id:* FRAUD--0000000001\
+*Case Id:* FRAUD--0000000001
 
     {
         "request" : "Please reassess the case. Customer reported a problem.."
@@ -60,7 +60,6 @@ Complete approve task
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
 *Task Id:* 23\
 *Auto-progress:* true\
-*Payload:*\
 
     {
         "isHighRisk": true
