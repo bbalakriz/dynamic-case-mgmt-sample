@@ -27,14 +27,14 @@ Update case data
 ==================
 
 *Container Id:* bala-case-proj_1.0.0-SNAPSHOT\
-*Case Id:* FRAUD--0000000001\
+*Case Id:* FRAUD--0000000001
 
-*Variables*:\
+*Variables*:
 newIssueRequired\
 complianceCheckComplete\
 
 *Value*:\
-true\
+true
 
 Case can be closed at any point in time
 
